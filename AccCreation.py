@@ -1,6 +1,8 @@
 import Frame as Fr
+import os
 
 def Accounts():
+    os.system('clear')
     print("\n")
     print("\n")
     print("\n Example Mail address \n Demon123@hell.com \n")

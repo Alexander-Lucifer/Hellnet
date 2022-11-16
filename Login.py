@@ -1,6 +1,7 @@
-import Base as B
+import os
 
 def Accounts():
+    os.system('clear')
     print("\n")
     print("\n")
     print("\n")

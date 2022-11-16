@@ -1,4 +1,6 @@
-def Admin():
+import os
+def Admin():                                                                                                                                                                 
+    os.system('clear')
     print("\n")
     print("\n")
     print("\n")
