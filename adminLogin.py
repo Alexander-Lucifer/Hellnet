@@ -1,6 +1,7 @@
 import AdminPage as ap
 import os
 def Admin():
+    os.system('çlear')
     print("\n")
     print("\n")
     print("\n")
