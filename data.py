@@ -1,6 +1,11 @@
-Name : str = input("Enter your name:- ")
+Name : str = input("Enter your  Firstname:- ")
 if (Name.isalpha()) == False:
     raise ValueError("Name is Invalid")
+
+Nam : str = input("Enter your  Lastname:- ")
+if (Nam.isalpha()) == False:
+    raise ValueError("Name is Invalid")
+
 
 Age : int = input("Enter your Age:- ")
 
@@ -29,6 +34,6 @@ else:
     
 a : str = input("Enter Alias:- ")
 
-Acc = open("Acc.csv", 'a')
-Acc.write(Name),Acc.write(","), Acc.write(Age),Acc.write(","), Acc.write(phnNUm),Acc.write(","), Acc.write(Add), Acc.write(any),Acc.write(","), Acc.write(rel),Acc.write(","), Acc.write(a)
+Acc = open("data.csv", 'a')
+Acc.write(Name+" "+Nam),Acc.write(","), Acc.write(Age),Acc.write(","), Acc.write(phnNUm),Acc.write(","), Acc.write(Add), Acc.write(any),Acc.write(","), Acc.write(rel),Acc.write(","), Acc.write(a)
 Acc.close()

@@ -1,8 +1,12 @@
 import os
-import consolemenu as C
 import search
+from platform import system
 def Accounts():
     while True:
+        if system() == 'Windows':
+            os.system('cls')
+        elif system() == 'Linux':
+            os.system('clear')
         print("\n")
         print("\n")
         print("\n")

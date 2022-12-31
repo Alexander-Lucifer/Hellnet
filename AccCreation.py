@@ -1,11 +1,14 @@
 import Frame as Fr
 import Login as l
 import os
-import consolemenu
 import pandas as pd
+from platform import system
 def Accounts():
     while True:
-        os.system('clear')
+        if system() == 'Windows':
+            os.system('cls')
+        elif system() == 'Linux':
+            os.system('clear')
         print("\n")
         print("\n")
         print("\n Example Mail address \n Demon123@hell.com \n")

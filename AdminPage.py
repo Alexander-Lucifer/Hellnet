@@ -1,6 +1,11 @@
 import os
+from platform import system
+import pandas as pd
 def Admin():                                                                                                                                                                 
-    os.system('clear')
+    if system() == 'Windows':
+        os.system('cls')
+    elif system() == 'Linux':
+        os.system('clear')
     print("\n")
     print("\n")
     print("\n")
@@ -14,6 +19,5 @@ def Admin():
     N = int(input())
 
     if N == 1:
-        dt = open("Accounts.txt", 'r')
-        Cont = dt.read()
+        Cont = pd.read_csv('Acc.csv')
         print(Cont)
