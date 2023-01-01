@@ -1,15 +1,11 @@
 import Login 
 import adminLogin as aL
 import search
-import os
-from platform import system
+from clear import clear
 def Frame():
 
     while True:
-        if system() == 'Windows':
-            os.system('cls')
-        elif system() == 'Linux':
-            os.system('clear')
+        clear()
         '''This Code is Written and Owned By Alexander Lucifer And Suryanshu Mittal
 (C)AbyssTech 2022
 I do not remember what does what so if you break it you fix it'''
@@ -25,12 +21,6 @@ Disclaimer!
 The Current Version Only Supports Text Based Questions
 
 ''')
-
-
-
-        print("\n")
-        print("\n")
-        print("\n")
         print('''**********************
 Press 1 To Login
 press 2 To view your Data

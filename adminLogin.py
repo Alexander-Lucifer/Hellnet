@@ -1,13 +1,6 @@
 import AdminPage as ap
-import os
-from platform import system
+from clear import clear
 import pandas as pd
-
-def clear():
-    if system() == 'Windows':
-        os.system('cls')
-    elif system() == 'Linux':
-        os.system('clear')
 
 
 def Admin():
@@ -35,7 +28,12 @@ def Admin():
         kg = cd['ID']
         jk = cd['Password']
         
+        if f not in range(1):
+            c -= 1
+            continue
+        
         g = gk[f]
+        
         k = kg[f]
         j = jk[f]
         

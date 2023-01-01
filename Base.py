@@ -2,23 +2,20 @@ import AccCreation
 import Login 
 import adminLogin as aL
 import search
-import os
-from platform import system
+from clear import clear
 
 while True:
 
-    if system() == 'Windows':
-        os.system('cls')
-    elif system() == 'Linux':
-        os.system('clear')
+    clear()
         
     '''This Code is Written and Owned By Alexander Lucifer And Suryanshu Mittal
 (C)AbyssTech 2022
 I do not remember what does what so if you break it you fix it, if can not, just pay'''
 
+
     print('''**********************
 Hello!
-Welcome To HellNet Ver.0.2
+Welcome To HellNet Ver.0.2                                                          
 The Official browser for the underworld
 (C)AbyssTech
 **********************

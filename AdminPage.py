@@ -1,14 +1,7 @@
-import os
-from platform import system
+from clear import clear
 import pandas as pd
 def Admin():                                                                                                                                                                 
-    if system() == 'Windows':
-        os.system('cls')
-    elif system() == 'Linux':
-        os.system('clear')
-    print("\n")
-    print("\n")
-    print("\n")
+    clear()
     print('''**********************
     Greetings Admin,
 

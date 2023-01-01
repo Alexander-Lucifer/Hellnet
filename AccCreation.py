@@ -1,23 +1,17 @@
 import Frame as Fr
 import Login as l
-import os
 import pandas as pd
-from platform import system
+from clear import clear
 def Accounts():
     while True:
-        if system() == 'Windows':
-            os.system('cls')
-        elif system() == 'Linux':
-            os.system('clear')
-        print("\n")
-        print("\n")
+        clear()
         print("\n Example Mail address \n Demon123@hell.com \n")
         print("\n")
         Name = input("Enter your Name:- ")
         print("\n")
         
         Num = (input("Enter Phone No.:- "))
-        if (len(Num) < 10) and (len(Num) > 10):
+        if (len(Num) < 10) or (len(Num) > 10):
             raise ValueError("invalid Number, Try again later...")
 
         print("\n")
@@ -41,17 +35,31 @@ def Accounts():
 
  
 
-        Acc = open("Acc.csv", 'r')
-        Cont = Acc.read()
-        if (Num in Cont) and (Mail in Cont):
-            print("An Error Occurred \n Account Already Exists for This Phone NUmber and Email ID", '\n')
-            Acc.close()
-        else:
-            Acc = open("Acc.csv", 'a')
-            Acc.write(Name),Acc.write(","), Acc.write(Num),Acc.write(","), Acc.write(Mail),Acc.write(","), Acc.write(Pass)
-            Acc.close()
+        #Acc = open("Acc.csv", 'r')
+        #Cont = Acc.read()
+        
+        df = pd.read_csv('acc.csv')
+        v = len(df)
+        gf = df.to_dict()
+
+        pN = gf['PhnNum']
+        Ml = gf['Mail']
+        ps = gf['Pass']
+        
+        for i in range(v):
+            p = pN[i] # PhnNum
+            m = Ml[i] # Mail
+            pss = ps[i] # Pass
+            if (Num == p) or (Mail == m):
+                print("An Error Occurred \n Account Already Exists for This Phone NUmber and Email ID", '\n')
+                
+            else:
+                Acc = open("Acc.csv", 'a')
+                Acc.write('\n')
+                Acc.write(Name),Acc.write(","), Acc.write(Num),Acc.write(","), Acc.write(Mail),Acc.write(","), Acc.write(Pass)
+                Acc.close()
     
-        print("Press 1 to Go back \nPress 2 to Login")
+        print("Press 1 to Go back \nPress 2 to Login\nPress 4 to retry")
 
         Z = int(input())
 
@@ -62,8 +70,5 @@ def Accounts():
         elif Z == 3:
             df = pd.read_csv("acc.csv")
             print(df)
-            
-            
-            
-            
-        
+        elif Z == 4:
+            continue

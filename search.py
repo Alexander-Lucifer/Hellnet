@@ -1,6 +1,5 @@
-import os 
-
+from clear import clear
 def searchEngine():
-    os.system('clear')
-    
+    clear()
+    print('''''')
     
