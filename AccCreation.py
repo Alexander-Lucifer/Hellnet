@@ -56,7 +56,7 @@ def Accounts():
             else:
                 Acc = open("Acc.csv", 'a')
                 Acc.write('\n')
-                Acc.write(Name),Acc.write(","), Acc.write(Num),Acc.write(","), Acc.write(Mail),Acc.write(","), Acc.write(Pass)
+                Acc.write(Name.title()),Acc.write(","), Acc.write(Num),Acc.write(","), Acc.write(Mail.lower()),Acc.write(","), Acc.write(Pass)
                 Acc.close()
     
         print("Press 1 to Go back \nPress 2 to Login\nPress 4 to retry")

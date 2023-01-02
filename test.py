@@ -1,7 +1,7 @@
 import pandas as pd
 import AdminPage as ap
 from clear import clear
-import keyboard
+import Global
 '''
 f  = int(input("Enter Row:- "))
         
@@ -42,6 +42,14 @@ while True:
     print("\n")
     Pass = input("PassWord:- ")
     print("\n")
+    
+    
+    Global.Authenticate(Mail, Pass)
+    
+    
+    
+    
+    '''
     df = pd.read_csv('Acc.csv')
     l = len(df)
     gf = df.to_dict()
@@ -57,14 +65,10 @@ while True:
         m = Ml[i] # Mail
         pss = ps[i] # Pass
             
-        if (m == Mail):
-            print("Test 1 : ✅")
-            if (pss == Pass)== True:
-                print("Test 2 : ✅")
-            elif (pss == Pass)== False:
-                print("Test 2 : ❌")
-        elif (m != Mail):
-            print("Test 1 : ❌")
+        if (m == Mail) and (pss == int(Pass)):
+            print(f'User {Global.G} ✅')
+        else:
+            print('❌')
         
             
         i = input()
@@ -74,4 +78,4 @@ while True:
         #if (m == Mail) and (pss == int(Pass)):
             #print(f'User {n}')
             
-            #M = input("Press Enter\n")
+            #M = input("Press Enter\n")'''
